@@ -13,6 +13,9 @@ import validation.StudentValidator;
 import validation.TemaValidator;
 import validation.Validator;
 
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
+import java.util.Random;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class StudentTest {
@@ -31,10 +34,13 @@ public class StudentTest {
         AtomicInteger students2 = new AtomicInteger();
         service.findAllStudents().forEach(stud->{
             students.addAndGet(1);});
-        service.saveStudent("id1","Daria",932);
+        service.saveStudent("uniqueId","Daria",932);
         service.findAllStudents().forEach(stud->{
             students2.addAndGet(1);});
-        assert students.equals(students2);
+        int size1 = students.get();
+        int size2 = students2.get();
+        assert size1 +1 == size2;
+        service.deleteStudent("uniqueId");
     }
 
 }

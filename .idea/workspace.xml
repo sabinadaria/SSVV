@@ -2,52 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4655333-8af9-4c77-ab80-3f36d85e6663" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_annotations_13_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_stdlib_1_4_20.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_stdlib_common_1_4_20.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_stdlib_jdk7_1_4_20.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_stdlib_jdk8_1_4_20.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_8_0_M1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_8_0_M1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_8_0_M1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_8_0_M1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_8_0_M1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_8_0_M1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/test/java/StudentTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonitorizareTemeLaboratorV01.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MonitorizareTemeLaboratorV01.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/console/UI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/HasID.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/Nota.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/Pair.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/Student.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/Tema.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/AbstractCRUDRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/AbstractFileRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/AbstractXMLRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/CRUDRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/NotaFileRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/NotaRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/NotaXMLRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/StudentFileRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/StudentRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/StudentXMLRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/TemaFileRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/TemaRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/TemaXMLRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/Service.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/validation/NotaValidator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/validation/StudentValidator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/validation/TemaValidator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/validation/ValidationException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/validation/Validator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/test/java/StudentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/java/StudentTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/studenti.xml" beforeDir="false" afterPath="$PROJECT_DIR$/studenti.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -92,7 +49,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.StudentTest.addStudentTest1">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="MonitorizareTemeLaboratorV01" />
@@ -102,8 +59,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="StudentTest.addStudentTest1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MonitorizareTemeLaboratorV01" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.java.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.java" />
+      <option name="MAIN_CLASS_NAME" value="test.java.StudentTest" />
+      <option name="METHOD_NAME" value="addStudentTest1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.StudentTest.addStudentTest1" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -119,7 +93,7 @@
       <option name="presentableId" value="Default" />
       <updated>1550871485222</updated>
       <workItem from="1550871488147" duration="1456000" />
-      <workItem from="1617644095653" duration="1903000" />
+      <workItem from="1617644095653" duration="3367000" />
     </task>
     <servers />
   </component>
@@ -136,5 +110,21 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/test/java/StudentTest.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/test/java/StudentTest.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
