@@ -1,0 +1,40 @@
+package test.java;
+
+import domain.Nota;
+import domain.Student;
+import domain.Tema;
+import org.junit.jupiter.api.Test;
+import repository.NotaXMLRepository;
+import repository.StudentXMLRepository;
+import repository.TemaXMLRepository;
+import service.Service;
+import validation.NotaValidator;
+import validation.StudentValidator;
+import validation.TemaValidator;
+import validation.Validator;
+
+import java.util.concurrent.atomic.AtomicInteger;
+
+public class StudentTest {
+    @Test
+    void addStudentTest1(){
+        Validator<Student> studentValidator = new StudentValidator();
+        Validator<Tema> temaValidator = new TemaValidator();
+        Validator<Nota> notaValidator = new NotaValidator();
+
+        StudentXMLRepository fileRepository1 = new StudentXMLRepository(studentValidator, "studenti.xml");
+        TemaXMLRepository fileRepository2 = new TemaXMLRepository(temaValidator, "teme.xml");
+        NotaXMLRepository fileRepository3 = new NotaXMLRepository(notaValidator, "note.xml");
+
+        Service service = new Service(fileRepository1, fileRepository2, fileRepository3);
+        AtomicInteger students = new AtomicInteger();
+        AtomicInteger students2 = new AtomicInteger();
+        service.findAllStudents().forEach(stud->{
+            students.addAndGet(1);});
+        service.saveStudent("id1","Daria",932);
+        service.findAllStudents().forEach(stud->{
+            students2.addAndGet(1);});
+        assert students.equals(students2);
+    }
+
+}
