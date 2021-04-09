@@ -72,4 +72,27 @@ public class StudentTest {
         service.deleteStudent("uniqueId");
     }
 
+    @Test
+    void addStudentTest3(){
+        Validator<Student> studentValidator = new StudentValidator();
+        Validator<Tema> temaValidator = new TemaValidator();
+        Validator<Nota> notaValidator = new NotaValidator();
+
+        StudentXMLRepository fileRepository1 = new StudentXMLRepository(studentValidator, "studenti.xml");
+        TemaXMLRepository fileRepository2 = new TemaXMLRepository(temaValidator, "teme.xml");
+        NotaXMLRepository fileRepository3 = new NotaXMLRepository(notaValidator, "note.xml");
+
+        Service service = new Service(fileRepository1, fileRepository2, fileRepository3);
+        AtomicInteger students = new AtomicInteger();
+        AtomicInteger students2 = new AtomicInteger();
+        service.findAllStudents().forEach(stud->{
+            students.addAndGet(1);});
+        service.saveStudent("uniqueId","Daria",110);
+        service.findAllStudents().forEach(stud->{
+            students2.addAndGet(1);});
+        int size1 = students.get();
+        int size2 = students2.get();
+        assert size1 == size2;
+    }
+
 }
