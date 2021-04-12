@@ -95,4 +95,165 @@ public class StudentTest {
         assert size1 == size2;
     }
 
+    @Test
+    void addStudentTest4(){
+        Validator<Student> studentValidator = new StudentValidator();
+        Validator<Tema> temaValidator = new TemaValidator();
+        Validator<Nota> notaValidator = new NotaValidator();
+
+        StudentXMLRepository fileRepository1 = new StudentXMLRepository(studentValidator, "studenti.xml");
+        TemaXMLRepository fileRepository2 = new TemaXMLRepository(temaValidator, "teme.xml");
+        NotaXMLRepository fileRepository3 = new NotaXMLRepository(notaValidator, "note.xml");
+
+        Service service = new Service(fileRepository1, fileRepository2, fileRepository3);
+        AtomicInteger students = new AtomicInteger();
+        AtomicInteger students2 = new AtomicInteger();
+        service.findAllStudents().forEach(stud->{
+            students.addAndGet(1);});
+        service.saveStudent("uniqueId","Daria",111);
+        service.findAllStudents().forEach(stud->{
+            students2.addAndGet(1);});
+        int size1 = students.get();
+        int size2 = students2.get();
+        assert size1 +1 == size2;
+    }
+
+    @Test
+    void addStudentTest5(){
+        Validator<Student> studentValidator = new StudentValidator();
+        Validator<Tema> temaValidator = new TemaValidator();
+        Validator<Nota> notaValidator = new NotaValidator();
+
+        StudentXMLRepository fileRepository1 = new StudentXMLRepository(studentValidator, "studenti.xml");
+        TemaXMLRepository fileRepository2 = new TemaXMLRepository(temaValidator, "teme.xml");
+        NotaXMLRepository fileRepository3 = new NotaXMLRepository(notaValidator, "note.xml");
+
+        Service service = new Service(fileRepository1, fileRepository2, fileRepository3);
+        AtomicInteger students = new AtomicInteger();
+        AtomicInteger students2 = new AtomicInteger();
+        service.findAllStudents().forEach(stud->{
+            students.addAndGet(1);});
+        service.saveStudent("uniqueId","Daria",938);
+        service.findAllStudents().forEach(stud->{
+            students2.addAndGet(1);});
+        int size1 = students.get();
+        int size2 = students2.get();
+        assert size1 == size2;
+    }
+
+    @Test
+    void addStudentTest6(){
+        Validator<Student> studentValidator = new StudentValidator();
+        Validator<Tema> temaValidator = new TemaValidator();
+        Validator<Nota> notaValidator = new NotaValidator();
+
+        StudentXMLRepository fileRepository1 = new StudentXMLRepository(studentValidator, "studenti.xml");
+        TemaXMLRepository fileRepository2 = new TemaXMLRepository(temaValidator, "teme.xml");
+        NotaXMLRepository fileRepository3 = new NotaXMLRepository(notaValidator, "note.xml");
+
+        Service service = new Service(fileRepository1, fileRepository2, fileRepository3);
+        AtomicInteger students = new AtomicInteger();
+        AtomicInteger students2 = new AtomicInteger();
+        service.findAllStudents().forEach(stud->{
+            students.addAndGet(1);});
+        service.saveStudent("uniqueId","Daria",937);
+        service.findAllStudents().forEach(stud->{
+            students2.addAndGet(1);});
+        int size1 = students.get();
+        int size2 = students2.get();
+        assert size1 +1 == size2;
+    }
+
+    @Test
+    void addStudentTest7(){
+        Validator<Student> studentValidator = new StudentValidator();
+        Validator<Tema> temaValidator = new TemaValidator();
+        Validator<Nota> notaValidator = new NotaValidator();
+
+        StudentXMLRepository fileRepository1 = new StudentXMLRepository(studentValidator, "studenti.xml");
+        TemaXMLRepository fileRepository2 = new TemaXMLRepository(temaValidator, "teme.xml");
+        NotaXMLRepository fileRepository3 = new NotaXMLRepository(notaValidator, "note.xml");
+
+        Service service = new Service(fileRepository1, fileRepository2, fileRepository3);
+        AtomicInteger students = new AtomicInteger();
+        AtomicInteger students2 = new AtomicInteger();
+        service.findAllStudents().forEach(stud->{
+            students.addAndGet(1);});
+        service.saveStudent("","Daria",932);
+        service.findAllStudents().forEach(stud->{
+            students2.addAndGet(1);});
+        int size1 = students.get();
+        int size2 = students2.get();
+        assert size1 == size2;
+    }
+
+    @Test
+    void addStudentTest8(){
+        Validator<Student> studentValidator = new StudentValidator();
+        Validator<Tema> temaValidator = new TemaValidator();
+        Validator<Nota> notaValidator = new NotaValidator();
+
+        StudentXMLRepository fileRepository1 = new StudentXMLRepository(studentValidator, "studenti.xml");
+        TemaXMLRepository fileRepository2 = new TemaXMLRepository(temaValidator, "teme.xml");
+        NotaXMLRepository fileRepository3 = new NotaXMLRepository(notaValidator, "note.xml");
+
+        Service service = new Service(fileRepository1, fileRepository2, fileRepository3);
+        AtomicInteger students = new AtomicInteger();
+        AtomicInteger students2 = new AtomicInteger();
+        service.findAllStudents().forEach(stud->{
+            students.addAndGet(1);});
+        service.saveStudent(null,"Daria",932);
+        service.findAllStudents().forEach(stud->{
+            students2.addAndGet(1);});
+        int size1 = students.get();
+        int size2 = students2.get();
+        assert size1 == size2;
+    }
+
+    @Test
+    void addStudentTest9(){
+        Validator<Student> studentValidator = new StudentValidator();
+        Validator<Tema> temaValidator = new TemaValidator();
+        Validator<Nota> notaValidator = new NotaValidator();
+
+        StudentXMLRepository fileRepository1 = new StudentXMLRepository(studentValidator, "studenti.xml");
+        TemaXMLRepository fileRepository2 = new TemaXMLRepository(temaValidator, "teme.xml");
+        NotaXMLRepository fileRepository3 = new NotaXMLRepository(notaValidator, "note.xml");
+
+        Service service = new Service(fileRepository1, fileRepository2, fileRepository3);
+        AtomicInteger students = new AtomicInteger();
+        AtomicInteger students2 = new AtomicInteger();
+        service.findAllStudents().forEach(stud->{
+            students.addAndGet(1);});
+        service.saveStudent("uniqueId","",932);
+        service.findAllStudents().forEach(stud->{
+            students2.addAndGet(1);});
+        int size1 = students.get();
+        int size2 = students2.get();
+        assert size1 == size2;
+    }
+
+    @Test
+    void addStudentTest10(){
+        Validator<Student> studentValidator = new StudentValidator();
+        Validator<Tema> temaValidator = new TemaValidator();
+        Validator<Nota> notaValidator = new NotaValidator();
+
+        StudentXMLRepository fileRepository1 = new StudentXMLRepository(studentValidator, "studenti.xml");
+        TemaXMLRepository fileRepository2 = new TemaXMLRepository(temaValidator, "teme.xml");
+        NotaXMLRepository fileRepository3 = new NotaXMLRepository(notaValidator, "note.xml");
+
+        Service service = new Service(fileRepository1, fileRepository2, fileRepository3);
+        AtomicInteger students = new AtomicInteger();
+        AtomicInteger students2 = new AtomicInteger();
+        service.findAllStudents().forEach(stud->{
+            students.addAndGet(1);});
+        service.saveStudent("uniqueId",null,932);
+        service.findAllStudents().forEach(stud->{
+            students2.addAndGet(1);});
+        int size1 = students.get();
+        int size2 = students2.get();
+        assert size1 == size2;
+    }
+
 }
