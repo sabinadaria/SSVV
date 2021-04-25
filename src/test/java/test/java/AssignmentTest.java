@@ -13,6 +13,8 @@ import validation.StudentValidator;
 import validation.TemaValidator;
 import validation.Validator;
 
+import java.util.Collection;
+import java.util.HashMap;
 import java.util.List;
 
 public class AssignmentTest {
@@ -29,14 +31,16 @@ public class AssignmentTest {
     NotaXMLRepository fileRepository3 = new NotaXMLRepository(notaValidator, "note.xml");
 
     Service service = new Service(fileRepository1, fileRepository2, fileRepository3);
-    List<Tema> teme = (List<Tema>)service.findAllTeme();
-    int size = teme.size();
+
+    Collection teme = (Collection)service.findAllTeme(); int size = teme.size();
     service.saveTema("id1", "descriere1", 2, 1);
 
-    List<Tema> teme2= (List<Tema>)service.findAllTeme();
+
+    Collection teme2 = (Collection)service.findAllTeme();
     int size2 = teme2.size();
 
     assert(size + 1 == size2);
+    service.deleteTema("id1");
 
 }
 
@@ -53,11 +57,12 @@ public class AssignmentTest {
 
     Service service = new Service(fileRepository1, fileRepository2, fileRepository3);
 
-    List<Tema> teme = (List<Tema>)service.findAllTeme();
-    int size = teme.size();
+
+    Collection teme = (Collection)service.findAllTeme();int size = teme.size();
     service.saveTema("", "descriere1", 2, 1);
 
-    List<Tema> teme2= (List<Tema>)service.findAllTeme();
+
+    Collection teme2 = (Collection)service.findAllTeme();
     int size2 = teme2.size();
 
     assert(size == size2);
@@ -75,7 +80,7 @@ void testCase3(){
 
     Service service = new Service(fileRepository1, fileRepository2, fileRepository3);
 
-    List<Tema> teme = (List<Tema>)service.findAllTeme();
+    Collection teme = (Collection)service.findAllTeme();
     int size = teme.size();
     service.saveTema(null, "descriere1", 2, 1);
 

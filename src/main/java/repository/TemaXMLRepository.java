@@ -13,7 +13,7 @@ public class TemaXMLRepository extends AbstractXMLRepository<String, Tema> {
     }
 
     protected Element getElementFromEntity(Tema tema, Document XMLdocument) {
-        Element element = XMLdocument.createElement("tema");
+        Element element = XMLdocument.createElement("ID");
         element.setAttribute("ID", tema.getID());
 
         element.appendChild(createElement(XMLdocument, "Descriere", tema.getDescriere()));
