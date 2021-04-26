@@ -19,76 +19,142 @@ import java.util.List;
 
 public class AssignmentTest {
 
-@Test
+    @Test
     void testCase1(){
-    //success
-    Validator<Student> studentValidator = new StudentValidator();
-    Validator<Tema> temaValidator = new TemaValidator();
-    Validator<Nota> notaValidator = new NotaValidator();
+        //success
+        Validator<Student> studentValidator = new StudentValidator();
+        Validator<Tema> temaValidator = new TemaValidator();
+        Validator<Nota> notaValidator = new NotaValidator();
 
-    StudentXMLRepository fileRepository1 = new StudentXMLRepository(studentValidator, "studenti.xml");
-    TemaXMLRepository fileRepository2 = new TemaXMLRepository(temaValidator, "teme.xml");
-    NotaXMLRepository fileRepository3 = new NotaXMLRepository(notaValidator, "note.xml");
+        StudentXMLRepository fileRepository1 = new StudentXMLRepository(studentValidator, "studenti.xml");
+        TemaXMLRepository fileRepository2 = new TemaXMLRepository(temaValidator, "teme.xml");
+        NotaXMLRepository fileRepository3 = new NotaXMLRepository(notaValidator, "note.xml");
 
-    Service service = new Service(fileRepository1, fileRepository2, fileRepository3);
+        Service service = new Service(fileRepository1, fileRepository2, fileRepository3);
 
-    Collection teme = (Collection)service.findAllTeme(); int size = teme.size();
-    service.saveTema("id1", "descriere1", 2, 1);
+        Collection teme = (Collection)service.findAllTeme(); int size = teme.size();
+        service.saveTema("id1", "descriere1", 2, 1);
 
 
-    Collection teme2 = (Collection)service.findAllTeme();
-    int size2 = teme2.size();
+        Collection teme2 = (Collection)service.findAllTeme();
+        int size2 = teme2.size();
 
-    assert(size + 1 == size2);
-    service.deleteTema("id1");
+        assert(size + 1 == size2);
+        service.deleteTema("id1");
 
-}
+    }
 
-@Test
+    @Test
     void testCase2(){
-    //failure
-    Validator<Student> studentValidator = new StudentValidator();
-    Validator<Tema> temaValidator = new TemaValidator();
-    Validator<Nota> notaValidator = new NotaValidator();
+        //failure
+        Validator<Student> studentValidator = new StudentValidator();
+        Validator<Tema> temaValidator = new TemaValidator();
+        Validator<Nota> notaValidator = new NotaValidator();
 
-    StudentXMLRepository fileRepository1 = new StudentXMLRepository(studentValidator, "studenti.xml");
-    TemaXMLRepository fileRepository2 = new TemaXMLRepository(temaValidator, "teme.xml");
-    NotaXMLRepository fileRepository3 = new NotaXMLRepository(notaValidator, "note.xml");
+        StudentXMLRepository fileRepository1 = new StudentXMLRepository(studentValidator, "studenti.xml");
+        TemaXMLRepository fileRepository2 = new TemaXMLRepository(temaValidator, "teme.xml");
+        NotaXMLRepository fileRepository3 = new NotaXMLRepository(notaValidator, "note.xml");
 
-    Service service = new Service(fileRepository1, fileRepository2, fileRepository3);
-
-
-    Collection teme = (Collection)service.findAllTeme();int size = teme.size();
-    service.saveTema("", "descriere1", 2, 1);
+        Service service = new Service(fileRepository1, fileRepository2, fileRepository3);
 
 
-    Collection teme2 = (Collection)service.findAllTeme();
-    int size2 = teme2.size();
+        Collection teme = (Collection)service.findAllTeme();int size = teme.size();
+        service.saveTema("", "descriere1", 2, 1);
 
-    assert(size == size2);
-}
 
-@Test
-void testCase3(){
-    Validator<Student> studentValidator = new StudentValidator();
-    Validator<Tema> temaValidator = new TemaValidator();
-    Validator<Nota> notaValidator = new NotaValidator();
+        Collection teme2 = (Collection)service.findAllTeme();
+        int size2 = teme2.size();
 
-    StudentXMLRepository fileRepository1 = new StudentXMLRepository(studentValidator, "studenti.xml");
-    TemaXMLRepository fileRepository2 = new TemaXMLRepository(temaValidator, "teme.xml");
-    NotaXMLRepository fileRepository3 = new NotaXMLRepository(notaValidator, "note.xml");
+        assert(size == size2);
+    }
 
-    Service service = new Service(fileRepository1, fileRepository2, fileRepository3);
+    @Test
+    void testCase3(){
+        Validator<Student> studentValidator = new StudentValidator();
+        Validator<Tema> temaValidator = new TemaValidator();
+        Validator<Nota> notaValidator = new NotaValidator();
 
-    Collection teme = (Collection)service.findAllTeme();
-    int size = teme.size();
-    service.saveTema(null, "descriere1", 2, 1);
+        StudentXMLRepository fileRepository1 = new StudentXMLRepository(studentValidator, "studenti.xml");
+        TemaXMLRepository fileRepository2 = new TemaXMLRepository(temaValidator, "teme.xml");
+        NotaXMLRepository fileRepository3 = new NotaXMLRepository(notaValidator, "note.xml");
 
-    List<Tema> teme2= (List<Tema>)service.findAllTeme();
-    int size2 = teme2.size();
+        Service service = new Service(fileRepository1, fileRepository2, fileRepository3);
 
-    assert(size == size2);
-}
+        Collection teme = (Collection)service.findAllTeme();
+        int size = teme.size();
+        service.saveTema("id1", "", 2, 1);
+
+        List<Tema> teme2= (List<Tema>)service.findAllTeme();
+        int size2 = teme2.size();
+
+        assert(size == size2);
+    }
+
+    @Test
+    void testCase4(){
+        Validator<Student> studentValidator = new StudentValidator();
+        Validator<Tema> temaValidator = new TemaValidator();
+        Validator<Nota> notaValidator = new NotaValidator();
+
+        StudentXMLRepository fileRepository1 = new StudentXMLRepository(studentValidator, "studenti.xml");
+        TemaXMLRepository fileRepository2 = new TemaXMLRepository(temaValidator, "teme.xml");
+        NotaXMLRepository fileRepository3 = new NotaXMLRepository(notaValidator, "note.xml");
+
+        Service service = new Service(fileRepository1, fileRepository2, fileRepository3);
+
+        List<Tema> teme = (List<Tema>)service.findAllTeme();
+        int size = teme.size();
+        service.saveTema("id1", "descriere1", 15, 2);
+
+        List<Tema> teme2= (List<Tema>)service.findAllTeme();
+        int size2 = teme2.size();
+
+        assert(size == size2);
+    }
+
+    @Test
+    void testCase5(){
+        Validator<Student> studentValidator = new StudentValidator();
+        Validator<Tema> temaValidator = new TemaValidator();
+        Validator<Nota> notaValidator = new NotaValidator();
+
+        StudentXMLRepository fileRepository1 = new StudentXMLRepository(studentValidator, "studenti.xml");
+        TemaXMLRepository fileRepository2 = new TemaXMLRepository(temaValidator, "teme.xml");
+        NotaXMLRepository fileRepository3 = new NotaXMLRepository(notaValidator, "note.xml");
+
+        Service service = new Service(fileRepository1, fileRepository2, fileRepository3);
+
+        List<Tema> teme = (List<Tema>)service.findAllTeme();
+        int size = teme.size();
+        service.saveTema("id1", "descriere1", 5, 0);
+
+        List<Tema> teme2= (List<Tema>)service.findAllTeme();
+        int size2 = teme2.size();
+
+        assert(size == size2);
+    }
+
+    @Test
+    void testCase6(){
+        Validator<Student> studentValidator = new StudentValidator();
+        Validator<Tema> temaValidator = new TemaValidator();
+        Validator<Nota> notaValidator = new NotaValidator();
+
+        StudentXMLRepository fileRepository1 = new StudentXMLRepository(studentValidator, "studenti.xml");
+        TemaXMLRepository fileRepository2 = new TemaXMLRepository(temaValidator, "teme.xml");
+        NotaXMLRepository fileRepository3 = new NotaXMLRepository(notaValidator, "note.xml");
+
+        Service service = new Service(fileRepository1, fileRepository2, fileRepository3);
+
+        List<Tema> teme = (List<Tema>)service.findAllTeme();
+        int size = teme.size();
+        service.saveTema("id1", "descriere1", 9, 13);
+
+        List<Tema> teme2= (List<Tema>)service.findAllTeme();
+        int size2 = teme2.size();
+
+        assert(size == size2);
+    }
 
 
 }
