@@ -1,21 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Entitati>
-    <nota IDStudent="1" IDTema="1">
-        <Nota>10.0</Nota>
-        <SaptamanaPredare>7</SaptamanaPredare>
-        <Feedback>done</Feedback>
-    </nota>
-    <nota IDStudent="1" IDTema="2">
-        <Nota>7.5</Nota>
-        <SaptamanaPredare>9</SaptamanaPredare>
-        <Feedback>done</Feedback>
-    </nota>
-    <nota IDStudent="idGrade" IDTema="idGrade">
+    <nota IDStudent="uniqueId2" IDTema="idTema2">
         <Nota>10.0</Nota>
         <SaptamanaPredare>2</SaptamanaPredare>
         <Feedback>customFeedback</Feedback>
     </nota>
-    <nota IDStudent="uniqueId" IDTema="idTema">
+    <nota IDStudent="uniqueId3" IDTema="idTema3">
+        <Nota>10.0</Nota>
+        <SaptamanaPredare>2</SaptamanaPredare>
+        <Feedback>customFeedback</Feedback>
+    </nota>
+    <nota IDStudent="idGrade" IDTema="idGrade">
         <Nota>10.0</Nota>
         <SaptamanaPredare>2</SaptamanaPredare>
         <Feedback>customFeedback</Feedback>

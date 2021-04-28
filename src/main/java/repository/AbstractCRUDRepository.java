@@ -21,7 +21,8 @@ public abstract class AbstractCRUDRepository<ID, E extends HasID<ID>> implements
             throw new IllegalArgumentException("ID-ul nu poate fi null! \n");
         }
         else {
-            return entities.get(id);
+            E var  =entities.get(id);
+            return var;
         }
     }
 
