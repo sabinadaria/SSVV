@@ -84,7 +84,7 @@ public class AssignmentTest {
         int size = teme.size();
         service.saveTema("id1", "", 2, 1);
 
-        List<Tema> teme2= (List<Tema>)service.findAllTeme();
+        Collection teme2 = (Collection)service.findAllTeme();
         int size2 = teme2.size();
 
         assert(size == size2);
@@ -102,11 +102,11 @@ public class AssignmentTest {
 
         Service service = new Service(fileRepository1, fileRepository2, fileRepository3);
 
-        List<Tema> teme = (List<Tema>)service.findAllTeme();
+        Collection teme = (Collection)service.findAllTeme();
         int size = teme.size();
         service.saveTema("id1", "descriere1", 15, 2);
 
-        List<Tema> teme2= (List<Tema>)service.findAllTeme();
+        Collection teme2 = (Collection)service.findAllTeme();
         int size2 = teme2.size();
 
         assert(size == size2);
@@ -124,11 +124,11 @@ public class AssignmentTest {
 
         Service service = new Service(fileRepository1, fileRepository2, fileRepository3);
 
-        List<Tema> teme = (List<Tema>)service.findAllTeme();
+        Collection teme = (Collection)service.findAllTeme();
         int size = teme.size();
         service.saveTema("id1", "descriere1", 5, 0);
 
-        List<Tema> teme2= (List<Tema>)service.findAllTeme();
+        Collection teme2 = (Collection)service.findAllTeme();
         int size2 = teme2.size();
 
         assert(size == size2);
@@ -146,11 +146,11 @@ public class AssignmentTest {
 
         Service service = new Service(fileRepository1, fileRepository2, fileRepository3);
 
-        List<Tema> teme = (List<Tema>)service.findAllTeme();
+        Collection teme = (Collection)service.findAllTeme();
         int size = teme.size();
         service.saveTema("id1", "descriere1", 9, 13);
 
-        List<Tema> teme2= (List<Tema>)service.findAllTeme();
+        Collection teme2 = (Collection)service.findAllTeme();
         int size2 = teme2.size();
 
         assert(size == size2);
